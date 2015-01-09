@@ -37,7 +37,7 @@ public static void isGameWon()
 	((board[0][2].equals(board[1][1])) && (board[1][1].equals(board[2][0])) && (!(board[2][0].equals(" ")))))
 		{
 		isGameWon=true;
-		System.out.println("Congratulations! You have won!");
+		System.out.println("The game is over.");
 		}
 	}
 }

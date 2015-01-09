@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class PlayersMove
 	{
-static String userPawn;
+static String userPawn, compPawn;
 static String pawn;
 public static void greetPlayer()
 		{
@@ -17,14 +17,24 @@ public static void askForPawn()
 	{
 	Scanner userInput = new Scanner(System.in);
 	System.out.println("Would you like to be X or O?");
-	userPawn=userInput.nextLine();
-	if (userPawn.equals("X") || userPawn.equals("O"))
+	String choice =userInput.nextLine();
+	if (choice.equals("X") || choice.equals("O"))
 		{
-		pawn=userPawn;
+		userPawn=choice;
 		}
 	else 
 		{
-		System.out.println("Would you like to be X or O?");
+		System.out.println("Oh look, just another guy who wants to break me. You are sooooooo cool.");
+		askForPawn(); 
+		}
+	if(userPawn=="X")
+		{
+		compPawn="O"; 
+		}
+	else
+		{
+		compPawn="X"; 
+		
 		}
 	}
 public static void askForMove()

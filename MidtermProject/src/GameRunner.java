@@ -9,11 +9,13 @@ public class GameRunner
 		while(!(BoardCreator.isGameWon))
 			{
 			PlayersMove.askForMove();
-			//BoardCreator.displayBoard();
-			//BoardCreator.isGameWon();
+			BoardCreator.isGameWon();
+			if(BoardCreator.isGameWon==true)
+				{
+				break;
+				}
 			AI.computerMove();
-			BoardCreator.displayBoard();
-			//BoardCreator.isGameWon();
+			BoardCreator.isGameWon();
 			}
 		}
 	}

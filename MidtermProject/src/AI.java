@@ -1,15 +1,15 @@
 import java.util.Scanner;
 public class AI
 	{
-	static int computerMove;
-	static int possibleMoves;
-	public static void chooseRandomMove()
-		{
-		int computerMove = (int) (Math.random() * 9) + 1;
-		String[]possibleMoves={"a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3"};
-		}
 	public static void computerMove()
+	{
+	int computerMove=(int) (Math.random() * 9) + 1;
+	placePawn(computerMove, PlayersMove.compPawn); 
+	}
+	
+	public static void placePawn(int computerMove, String pawn)
 		{
+		
 		if(computerMove==1)
 			{
 			BoardCreator.board[0][0]="O";
