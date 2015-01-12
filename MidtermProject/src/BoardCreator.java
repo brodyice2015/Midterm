@@ -3,6 +3,7 @@ public class BoardCreator
 	{
 	public static String[][] board=new String[3][3];
 	public static boolean isGameWon=false;
+	public static boolean checkTie; 
 public static void createBoard1()
 	{
 	for(int i=0; i<3;i++) 
@@ -38,6 +39,21 @@ public static void isGameWon()
 		{
 		isGameWon=true;
 		System.out.println("The game is over");
+		}
+	checkTie=true;
+	for(int i=0; i<3; i++)
+		{
+		for(int z=0; z<3; z++)
+			{
+			if(board[i][z].equals(" "))
+				{
+				checkTie=false;
+				}
+			}
+		}
+	if(checkTie == true)
+		{
+		isGameWon=true;
 		}
 	}
 }
