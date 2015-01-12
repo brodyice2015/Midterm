@@ -41,6 +41,15 @@ public static void askForMove()
 	String move=userInput.nextLine().toLowerCase();
 	placePawn(move, userPawn); 
 	}
+
+public static void askForMove(String pawn)
+{
+Scanner userInput = new Scanner(System.in);
+System.out.println("Please make a valid move.");
+String move=userInput.nextLine().toLowerCase();
+placePawn(move, pawn); 
+}
+
 public static void placePawn(String move, String pawn)
 	{
 	switch(move) 
